@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  /* SIMPLE & CLEAN LIGHT MODE VARIABLES */
+  --color-bg-base: #FFFFFF;
+  --color-bg-card: #F8FAFC;
+  --color-text-main: #020617; /* Near pure black for maximum contrast */
+  --color-text-mut: #334155; 
+  --color-border-line: #E2E8F0; 
+  
+  --glass-bg: rgba(248, 250, 252, 0.95); /* Clean, almost solid card backgrounds */
+  --glass-border: rgba(0, 0, 0, 0.08); /* Crisp subtle edge */
+  --glass-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.02); /* Soft clean shadow */
+  
+  --orb-opacity: 0;
+}
+
+.dark {
+  /* DARK MODE VARIABLES */
+  --color-bg-base: #0B1121; /* Deep cosmic blue matching the galaxy backdrop */
+  --color-bg-card: #1E293B;
+  --color-text-main: #F1F5F9;
+  --color-text-mut: #CBD5E1;
+  --color-border-line: #334155;
+  
+  --glass-bg: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  
+  --orb-opacity: 0.25;
+}
+
+@theme {
+  --color-primary: #3B82F6;
+  --color-secondary: #1E293B;
+  --color-accent: #8B5CF6;
+  
+  --color-background: var(--color-bg-base);
+  --color-card: var(--color-bg-card);
+  --color-textMain: var(--color-text-main);
+  --color-textSecondary: var(--color-text-mut);
+  --color-border: var(--color-border-line);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --animate-shimmer: shimmer 2s linear infinite;
+}
+
+html, body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  letter-spacing: 0.025em;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15), transparent 60%);
+  scroll-behavior: smooth;
+}
+
+@utility glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: background 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+}
+
+  .text-gradient {
+    background: linear-gradient(to right, #60a5fa, #a78bfa, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: gradientShift 6s ease infinite;
+  }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-30px) rotate(5deg); }
+  66% { transform: translateY(15px) rotate(-5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
