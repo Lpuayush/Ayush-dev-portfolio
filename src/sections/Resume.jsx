@@ -237,7 +237,7 @@ export default function Resume() {
         {/* Download Button */}
         <div className="flex justify-center mt-12">
           <Button variant="primary" className="px-8 py-4 text-base font-semibold gap-3 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-            <a href="/Ayush SCV.pdf" download className="flex items-center gap-2">
+            <a href="/Ayush_CV.pdf" download className="flex items-center gap-2">
               <Download size={20} />
               Download Full Resume
             </a>

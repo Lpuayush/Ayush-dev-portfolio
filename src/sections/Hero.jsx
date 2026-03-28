@@ -126,7 +126,7 @@ export default function Hero() {
           </Link>
           
           <Button variant="outline" className="w-full sm:w-auto px-6 py-3 text-base font-semibold gap-2 text-textMain border-textSecondary/30 hover:border-textMain hover:bg-white/5 transition-all group mt-2">
-            <a href="/Ayush SCV.pdf" download>Download Resume</a>
+            <a href="/Ayush_CV.pdf" download>Download Resume</a>
             <Download size={18} className="group-hover:translate-y-1 transition-transform" />
           </Button>
         </motion.div>
