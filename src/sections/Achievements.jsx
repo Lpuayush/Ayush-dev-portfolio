@@ -1,16 +1,10 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionHeading from "../components/SectionHeading";
-import { Award, Trophy } from "lucide-react";
+import { Award } from "lucide-react";
 
 export default function Achievements() {
   const achievements = [
-    {
-      title: "Top 100 Finalist",
-      organization: "IIT Bhubaneswar Frontend Hackathon",
-      description: "Secured a Top 100 position in the IIT Bhubaneswar Frontend Hackathon and received the Final Merit Certificate.",
-      icon: <Trophy className="text-yellow-400" size={32} />
-    },
     {
       title: "150+ Coding Problems Solved",
       organization: "LeetCode, HackerRank & Others",
